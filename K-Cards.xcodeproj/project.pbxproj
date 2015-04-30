@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D28E46F1AF21689005EAD4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E46E1AF21689005EAD4C /* main.m */; };
+		2D28E4721AF21689005EAD4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E4711AF21689005EAD4C /* AppDelegate.m */; };
+		2D28E4751AF21689005EAD4C /* K_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E4731AF21689005EAD4C /* K_Cards.xcdatamodeld */; };
+		2D28E4781AF21689005EAD4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E4771AF21689005EAD4C /* ViewController.m */; };
+		2D28E47B1AF21689005EAD4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D28E4791AF21689005EAD4C /* Main.storyboard */; };
+		2D28E47D1AF21689005EAD4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D28E47C1AF21689005EAD4C /* Images.xcassets */; };
+		2D28E4801AF21689005EAD4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D28E47E1AF21689005EAD4C /* LaunchScreen.xib */; };
+		2D28E48C1AF21689005EAD4C /* K_CardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E48B1AF21689005EAD4C /* K_CardsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D28E4861AF21689005EAD4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D28E4611AF21689005EAD4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D28E4681AF21689005EAD4C;
+			remoteInfo = "K-Cards";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D28E4691AF21689005EAD4C /* K-Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K-Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D28E46D1AF21689005EAD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D28E46E1AF21689005EAD4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D28E4701AF21689005EAD4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D28E4711AF21689005EAD4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D28E4741AF21689005EAD4C /* K_Cards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = K_Cards.xcdatamodel; sourceTree = "<group>"; };
+		2D28E4761AF21689005EAD4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2D28E4771AF21689005EAD4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2D28E47A1AF21689005EAD4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D28E47C1AF21689005EAD4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2D28E47F1AF21689005EAD4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2D28E4851AF21689005EAD4C /* K-CardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "K-CardsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D28E48A1AF21689005EAD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D28E48B1AF21689005EAD4C /* K_CardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = K_CardsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D28E4661AF21689005EAD4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D28E4821AF21689005EAD4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D28E4601AF21689005EAD4C = {
+			isa = PBXGroup;
+			children = (
+				2D28E46B1AF21689005EAD4C /* K-Cards */,
+				2D28E4881AF21689005EAD4C /* K-CardsTests */,
+				2D28E46A1AF21689005EAD4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D28E46A1AF21689005EAD4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D28E4691AF21689005EAD4C /* K-Cards.app */,
+				2D28E4851AF21689005EAD4C /* K-CardsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D28E46B1AF21689005EAD4C /* K-Cards */ = {
+			isa = PBXGroup;
+			children = (
+				2D28E4701AF21689005EAD4C /* AppDelegate.h */,
+				2D28E4711AF21689005EAD4C /* AppDelegate.m */,
+				2D28E4761AF21689005EAD4C /* ViewController.h */,
+				2D28E4771AF21689005EAD4C /* ViewController.m */,
+				2D28E4791AF21689005EAD4C /* Main.storyboard */,
+				2D28E47C1AF21689005EAD4C /* Images.xcassets */,
+				2D28E47E1AF21689005EAD4C /* LaunchScreen.xib */,
+				2D28E4731AF21689005EAD4C /* K_Cards.xcdatamodeld */,
+				2D28E46C1AF21689005EAD4C /* Supporting Files */,
+			);
+			path = "K-Cards";
+			sourceTree = "<group>";
+		};
+		2D28E46C1AF21689005EAD4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D28E46D1AF21689005EAD4C /* Info.plist */,
+				2D28E46E1AF21689005EAD4C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D28E4881AF21689005EAD4C /* K-CardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D28E48B1AF21689005EAD4C /* K_CardsTests.m */,
+				2D28E4891AF21689005EAD4C /* Supporting Files */,
+			);
+			path = "K-CardsTests";
+			sourceTree = "<group>";
+		};
+		2D28E4891AF21689005EAD4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D28E48A1AF21689005EAD4C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D28E4681AF21689005EAD4C /* K-Cards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D28E48F1AF21689005EAD4C /* Build configuration list for PBXNativeTarget "K-Cards" */;
+			buildPhases = (
+				2D28E4651AF21689005EAD4C /* Sources */,
+				2D28E4661AF21689005EAD4C /* Frameworks */,
+				2D28E4671AF21689005EAD4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "K-Cards";
+			productName = "K-Cards";
+			productReference = 2D28E4691AF21689005EAD4C /* K-Cards.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D28E4841AF21689005EAD4C /* K-CardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D28E4921AF21689005EAD4C /* Build configuration list for PBXNativeTarget "K-CardsTests" */;
+			buildPhases = (
+				2D28E4811AF21689005EAD4C /* Sources */,
+				2D28E4821AF21689005EAD4C /* Frameworks */,
+				2D28E4831AF21689005EAD4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D28E4871AF21689005EAD4C /* PBXTargetDependency */,
+			);
+			name = "K-CardsTests";
+			productName = "K-CardsTests";
+			productReference = 2D28E4851AF21689005EAD4C /* K-CardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D28E4611AF21689005EAD4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = altom;
+				TargetAttributes = {
+					2D28E4681AF21689005EAD4C = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					2D28E4841AF21689005EAD4C = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 2D28E4681AF21689005EAD4C;
+					};
+				};
+			};
+			buildConfigurationList = 2D28E4641AF21689005EAD4C /* Build configuration list for PBXProject "K-Cards" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D28E4601AF21689005EAD4C;
+			productRefGroup = 2D28E46A1AF21689005EAD4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D28E4681AF21689005EAD4C /* K-Cards */,
+				2D28E4841AF21689005EAD4C /* K-CardsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D28E4671AF21689005EAD4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D28E47B1AF21689005EAD4C /* Main.storyboard in Resources */,
+				2D28E4801AF21689005EAD4C /* LaunchScreen.xib in Resources */,
+				2D28E47D1AF21689005EAD4C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D28E4831AF21689005EAD4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D28E4651AF21689005EAD4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D28E4721AF21689005EAD4C /* AppDelegate.m in Sources */,
+				2D28E46F1AF21689005EAD4C /* main.m in Sources */,
+				2D28E4781AF21689005EAD4C /* ViewController.m in Sources */,
+				2D28E4751AF21689005EAD4C /* K_Cards.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D28E4811AF21689005EAD4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D28E48C1AF21689005EAD4C /* K_CardsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D28E4871AF21689005EAD4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D28E4681AF21689005EAD4C /* K-Cards */;
+			targetProxy = 2D28E4861AF21689005EAD4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D28E4791AF21689005EAD4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D28E47A1AF21689005EAD4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2D28E47E1AF21689005EAD4C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D28E47F1AF21689005EAD4C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D28E48D1AF21689005EAD4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D28E48E1AF21689005EAD4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D28E4901AF21689005EAD4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "K-Cards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D28E4911AF21689005EAD4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "K-Cards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2D28E4931AF21689005EAD4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "K-CardsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/K-Cards.app/K-Cards";
+			};
+			name = Debug;
+		};
+		2D28E4941AF21689005EAD4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "K-CardsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/K-Cards.app/K-Cards";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D28E4641AF21689005EAD4C /* Build configuration list for PBXProject "K-Cards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D28E48D1AF21689005EAD4C /* Debug */,
+				2D28E48E1AF21689005EAD4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D28E48F1AF21689005EAD4C /* Build configuration list for PBXNativeTarget "K-Cards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D28E4901AF21689005EAD4C /* Debug */,
+				2D28E4911AF21689005EAD4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2D28E4921AF21689005EAD4C /* Build configuration list for PBXNativeTarget "K-CardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D28E4931AF21689005EAD4C /* Debug */,
+				2D28E4941AF21689005EAD4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2D28E4731AF21689005EAD4C /* K_Cards.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2D28E4741AF21689005EAD4C /* K_Cards.xcdatamodel */,
+			);
+			currentVersion = 2D28E4741AF21689005EAD4C /* K_Cards.xcdatamodel */;
+			path = K_Cards.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2D28E4611AF21689005EAD4C /* Project object */;
+}
