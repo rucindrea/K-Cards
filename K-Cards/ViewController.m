@@ -29,7 +29,11 @@
     }
     [self.view setBackgroundColor:myGreenColor];
     [self.colorLabel setText:myGreenColorText];
+    [self.navigationController setNavigationBarHidden:YES];
+
 }
+
+
 
 - (IBAction)changeColor:(id)sender {
     if ([self.view.backgroundColor isEqual:myGreenColor]) {
@@ -91,6 +95,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 @end

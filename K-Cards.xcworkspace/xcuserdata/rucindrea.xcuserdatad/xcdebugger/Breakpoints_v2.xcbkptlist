@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "K-Cards UITests/UITests.m"
-            timestampString = "452967193.849002"
+            timestampString = "452976557.093458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
             landmarkName = "@implementation UITests"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "K-Cards UITests/UITests.m"
-            timestampString = "452967193.849002"
+            timestampString = "452976557.093458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
             landmarkName = "-colorAsHex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,12 +42,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "K-Cards UITests/UITests.m"
-            timestampString = "452967184.198725"
+            timestampString = "452976557.093458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-testAddEmptyNameAndCancelShouldKeepPreviousName"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "K-Cards UITests/UITests.m"
+            timestampString = "452976557.093458"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-testReturnToConfirmName"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "K-Cards UITests/UITests.m"
+            timestampString = "452976390.010204"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-beforeEach"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

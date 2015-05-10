@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lKR-cG-5A4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green - New Thread" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-LX-jzl">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Green - New Thread" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-LX-jzl">
                                 <rect key="frame" x="16" y="47" width="568" height="15"/>
                                 <accessibility key="accessibilityConfiguration" label="colorLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -32,7 +32,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQQ-Ld-jgW">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQQ-Ld-jgW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <accessibility key="accessibilityConfiguration" label="changeColorButton"/>
                                 <state key="normal">
@@ -53,7 +53,7 @@
                                     <action selector="addName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcy-oK-NC4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USf-1y-4Q5">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USf-1y-4Q5">
                                 <rect key="frame" x="562" y="44" width="22" height="22"/>
                                 <accessibility key="accessibilityConfiguration" label="infoButton"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,7 +62,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="age-QS-c9C" kind="presentation" modalTransitionStyle="flipHorizontal" id="t2x-al-T7l"/>
+                                    <segue destination="age-QS-c9C" kind="show" id="t2x-al-T7l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,6 +87,7 @@
                             <constraint firstItem="Y2d-zs-E9x" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xWz-fG-Qyn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fQB-N4-K8I"/>
                     <connections>
                         <outlet property="addNameButton" destination="K36-8c-ql6" id="8fa-16-hWA"/>
                         <outlet property="changeButton" destination="XQQ-Ld-jgW" id="qfc-EV-HXL"/>
@@ -97,12 +98,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="372"/>
+            <point key="canvasLocation" x="997" y="372"/>
         </scene>
-        <!--InfoViewController-->
+        <!--About K-Cards-->
         <scene sceneID="d6J-s0-6KO">
             <objects>
-                <viewController title="InfoViewController" id="age-QS-c9C" sceneMemberID="viewController">
+                <viewController title="About K-Cards" id="age-QS-c9C" customClass="InfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WhN-Fh-VHb"/>
                         <viewControllerLayoutGuide type="bottom" id="57T-jz-OEf"/>
@@ -111,31 +112,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" contentMode="bottom" misplaced="YES" bounces="NO" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-2g-kIi">
-                                <rect key="frame" x="16" y="44" width="568" height="434"/>
+                            <textView clipsSubviews="YES" contentMode="top" bounces="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-2g-kIi">
+                                <rect key="frame" x="16" y="34" width="568" height="566"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="infoTextView"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">About K-Cards
-
-K-Cards are used for facilitating discussions and keeping track of discussion threads. They were first used by a group of software testers as part of their peer-conference facilitation at events like WTSTs (Workshop on Teaching Software Testing) and WOC (Workshop on Open Certification). The initial concept was developed and used by Paul Holland, his wife Karen and Scott Barber. 
+                                        <string key="content">K-Cards are used for facilitating discussions and keeping track of discussion threads. They were first used by a group of software testers as part of their peer-conference facilitation at events like WTSTs (Workshop on Teaching Software Testing) and WOC (Workshop on Open Certification). The initial concept was developed and used by Paul Holland, his wife Karen and Scott Barber. 
 
 The facilitator of a discussion keeps track of discussion threads/topics and who wants to (still) talk about them using color cards that the participants show. 
-
-Here are all the color and their meaning:
-
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="·   ">
+                                    <fragment>
+                                        <string key="content">
+Here are all the color and their meaning:
+
+·   </string>
                                         <attributes>
                                             <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -143,7 +144,7 @@ Here are all the color and their meaning:
                                     <fragment content="Green: ">
                                         <attributes>
                                             <color key="NSColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -153,7 +154,7 @@ Here are all the color and their meaning:
 ·   </string>
                                         <attributes>
                                             <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -161,7 +162,7 @@ Here are all the color and their meaning:
                                     <fragment content="Yellow:">
                                         <attributes>
                                             <color key="NSColor" red="0.63429684940752951" green="0.63469328703703698" blue="0.0056918480337494106" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -171,7 +172,7 @@ Here are all the color and their meaning:
 ·   </string>
                                         <attributes>
                                             <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -179,7 +180,7 @@ Here are all the color and their meaning:
                                     <fragment content="Red">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -189,7 +190,7 @@ Here are all the color and their meaning:
 ·   </string>
                                         <attributes>
                                             <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -197,89 +198,64 @@ Here are all the color and their meaning:
                                     <fragment content="B">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="lue">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content"> (or purple): I feel this discussion is becoming (or has become) a rat hole. – This one is not used at larger conferences.
-</string>
+
+For a full account of the history of K-Cards, here is Paul Holland's post about it: http://testingthoughts.com/blog/26</string>
                                         <attributes>
                                             <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">For a full account of the history of K-Cards, here is Paul Holland's post about it: http://testingthoughts.com/blog/26
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9k-RS-hFL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="KoH-Ls-k9D"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="57T-jz-OEf" firstAttribute="top" secondItem="BY4-2g-kIi" secondAttribute="bottom" id="92s-Fn-gum"/>
                             <constraint firstItem="BY4-2g-kIi" firstAttribute="trailing" secondItem="oIa-lo-Sh1" secondAttribute="trailingMargin" id="IDJ-nm-Wss"/>
                             <constraint firstItem="BY4-2g-kIi" firstAttribute="leading" secondItem="oIa-lo-Sh1" secondAttribute="leadingMargin" id="JTp-5k-uGD"/>
-                            <constraint firstItem="j9k-RS-hFL" firstAttribute="leading" secondItem="oIa-lo-Sh1" secondAttribute="leadingMargin" constant="-16" id="MDL-Mj-PA4"/>
-                            <constraint firstItem="BY4-2g-kIi" firstAttribute="top" secondItem="WhN-Fh-VHb" secondAttribute="bottom" constant="24" id="NQh-Qo-LgU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="j9k-RS-hFL" secondAttribute="trailing" constant="-16" id="hIw-TN-nK8"/>
-                            <constraint firstItem="j9k-RS-hFL" firstAttribute="top" secondItem="WhN-Fh-VHb" secondAttribute="bottom" constant="-20" id="wbR-jE-iVZ"/>
-                            <constraint firstItem="57T-jz-OEf" firstAttribute="top" secondItem="j9k-RS-hFL" secondAttribute="bottom" id="zNn-Ew-fEu"/>
+                            <constraint firstItem="BY4-2g-kIi" firstAttribute="top" secondItem="WhN-Fh-VHb" secondAttribute="bottom" constant="-30" id="NQh-Qo-LgU"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWs-tf-29b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="378"/>
+            <point key="canvasLocation" x="1800" y="534"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t2F-Pg-LbM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lKR-cG-5A4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" id="5XX-Oz-fwv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sxC-F9-Ncd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7R-Va-i5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="372"/>
         </scene>
     </scenes>
 </document>

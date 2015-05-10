@@ -17,6 +17,7 @@
 		2D28E48C1AF21689005EAD4C /* K_CardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E48B1AF21689005EAD4C /* K_CardsTests.m */; };
 		2D28E4971AFF7746005EAD4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E4771AF21689005EAD4C /* ViewController.m */; };
 		2D28E4F51AFF9268005EAD4C /* UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E4F41AFF9268005EAD4C /* UITests.m */; };
+		2D28E5301AFFC673005EAD4C /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D28E52F1AFFC673005EAD4C /* InfoViewController.m */; };
 		C8F6FC015C62AB47411E5B6A /* Pods_K_Cards_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE37A4336F64E89F2E7BFAF /* Pods_K_Cards_UITests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		2D28E4E61AFF8C6A005EAD4C /* K-Cards UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "K-Cards UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D28E4E91AFF8C6B005EAD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D28E4F41AFF9268005EAD4C /* UITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITests.m; sourceTree = "<group>"; };
+		2D28E52E1AFFC673005EAD4C /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		2D28E52F1AFFC673005EAD4C /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		9EE37A4336F64E89F2E7BFAF /* Pods_K_Cards_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_Cards_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7892911275866F32F5065AF /* Pods-K-Cards UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-Cards UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K-Cards UITests/Pods-K-Cards UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,14 +114,11 @@
 		2D28E46B1AF21689005EAD4C /* K-Cards */ = {
 			isa = PBXGroup;
 			children = (
-				2D28E4701AF21689005EAD4C /* AppDelegate.h */,
-				2D28E4711AF21689005EAD4C /* AppDelegate.m */,
+				2D28E52E1AFFC673005EAD4C /* InfoViewController.h */,
+				2D28E52F1AFFC673005EAD4C /* InfoViewController.m */,
 				2D28E4761AF21689005EAD4C /* ViewController.h */,
 				2D28E4771AF21689005EAD4C /* ViewController.m */,
 				2D28E4791AF21689005EAD4C /* Main.storyboard */,
-				2D28E47C1AF21689005EAD4C /* Images.xcassets */,
-				2D28E47E1AF21689005EAD4C /* LaunchScreen.xib */,
-				2D28E4731AF21689005EAD4C /* K_Cards.xcdatamodeld */,
 				2D28E46C1AF21689005EAD4C /* Supporting Files */,
 			);
 			path = "K-Cards";
@@ -127,6 +127,11 @@
 		2D28E46C1AF21689005EAD4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D28E47C1AF21689005EAD4C /* Images.xcassets */,
+				2D28E47E1AF21689005EAD4C /* LaunchScreen.xib */,
+				2D28E4731AF21689005EAD4C /* K_Cards.xcdatamodeld */,
+				2D28E4701AF21689005EAD4C /* AppDelegate.h */,
+				2D28E4711AF21689005EAD4C /* AppDelegate.m */,
 				2D28E46D1AF21689005EAD4C /* Info.plist */,
 				2D28E46E1AF21689005EAD4C /* main.m */,
 			);
@@ -369,6 +374,7 @@
 				2D28E4721AF21689005EAD4C /* AppDelegate.m in Sources */,
 				2D28E46F1AF21689005EAD4C /* main.m in Sources */,
 				2D28E4781AF21689005EAD4C /* ViewController.m in Sources */,
+				2D28E5301AFFC673005EAD4C /* InfoViewController.m in Sources */,
 				2D28E4751AF21689005EAD4C /* K_Cards.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

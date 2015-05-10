@@ -8,7 +8,13 @@
 
 #import <KIF/KIF.h>
 #import "ViewController.h"
+
+#define moreInfoURL @"http://testingthoughts.com/blog/26"
+
 @interface UITests: KIFTestCase
+
+@property KIFSystemTestActor * sysTester;
+
 @end
 
 @implementation UITests
@@ -16,6 +22,9 @@
 - (void)beforeEach
 {
     //setup
+    self.sysTester = [[KIFSystemTestActor alloc] init];
+    
+    [self.sysTester simulateDeviceRotationToOrientation:UIDeviceOrientationPortrait];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@"" forKey:@"name"];
     [defaults synchronize];
@@ -30,9 +39,54 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@"" forKey:@"name"];
     [defaults synchronize];
+    [self.sysTester simulateDeviceRotationToOrientation:UIDeviceOrientationPortrait];
     UIWindow *window = [UIApplication sharedApplication].delegate.window;
     window.rootViewController = [window.rootViewController.storyboard instantiateInitialViewController];
+
 }
+
+
+//============ INFO SCREEN TESTS ==============
+
+-(void)testInfoScreenTextIsScrollablePortrait {
+    [tester tapViewWithAccessibilityLabel:@"infoButton"];
+    UITextView * infoTextView = (UITextView*)[tester waitForViewWithAccessibilityLabel:@"infoTextView"];
+    XCTAssert([infoTextView isScrollEnabled], @"Info text view should be scroll enabled");
+}
+
+-(void)testInfoScreenTextIsScrollableLandscape {
+    [self.sysTester simulateDeviceRotationToOrientation:UIDeviceOrientationLandscapeLeft];
+    [tester tapViewWithAccessibilityLabel:@"infoButton"];
+    UITextView * infoTextView = (UITextView*)[tester waitForViewWithAccessibilityLabel:@"infoTextView"];
+    XCTAssert([infoTextView isScrollEnabled], @"Info text view should be scroll enabled");
+}
+
+-(void)testInfoScreenTextIsVisiblePortrait {
+    [tester tapViewWithAccessibilityLabel:@"infoButton"];
+    UITextView * infoTextView = (UITextView*)[tester waitForViewWithAccessibilityLabel:@"infoTextView"];
+    XCTAssert([[infoTextView text] containsString:moreInfoURL], @"Info text should contain URL with more info.");
+}
+
+-(void)testInfoScreenTextIsVisibleLandscape {
+    [self.sysTester simulateDeviceRotationToOrientation:UIDeviceOrientationLandscapeLeft];
+    [tester tapViewWithAccessibilityLabel:@"infoButton"];
+    UITextView * infoTextView = (UITextView*)[tester waitForViewWithAccessibilityLabel:@"infoTextView"];
+    XCTAssert([[infoTextView text] containsString:moreInfoURL], @"Info text should contain URL with more info.");
+}
+
+-(void)testInfoScreenTextIsSelectablePortrait {
+    [tester tapViewWithAccessibilityLabel:@"infoButton"];
+    UITextView * infoTextView = (UITextView*)[tester waitForViewWithAccessibilityLabel:@"infoTextView"];
+    XCTAssert([infoTextView isSelectable], @"Info text view should be selectable");
+}
+
+-(void)testInfoScreenTextIsSelectableLandscape {
+    [self.sysTester simulateDeviceRotationToOrientation:UIDeviceOrientationLandscapeLeft];
+    [tester tapViewWithAccessibilityLabel:@"infoButton"];
+    UITextView * infoTextView = (UITextView*)[tester waitForViewWithAccessibilityLabel:@"infoTextView"];
+    XCTAssert([infoTextView isSelectable], @"Info text view should be selectable");
+}
+
 
 
 //============ ADD/CHANGE NAME TESTS ==============
@@ -57,6 +111,7 @@
 }
 
 -(void)testAddEmptyNameAndCancelShouldKeepPreviousName {
+    //Issue #3
     [self changeNameTo:@"Anna"];
     [self changeNameAndCancel:@""];
     UILabel * nameLabel = (UILabel*)[tester waitForViewWithAccessibilityLabel:@"nameLabel"];
@@ -64,6 +119,7 @@
 }
 
 -(void)testReturnToConfirmName {
+    //Issue #5
     [tester tapViewWithAccessibilityLabel:@"addNameButton"];
     [tester waitForTimeInterval:1];
     [tester waitForViewWithAccessibilityLabel:alertViewMessage];
