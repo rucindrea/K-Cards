@@ -63,6 +63,15 @@
     XCTAssert([[nameLabel text] isEqualToString:@"ANNA"], @"Name should be ANNA but was: %@", [nameLabel text]);
 }
 
+-(void)testReturnToConfirmName {
+    [tester tapViewWithAccessibilityLabel:@"addNameButton"];
+    [tester waitForTimeInterval:1];
+    [tester waitForViewWithAccessibilityLabel:alertViewMessage];
+    [tester enterTextIntoCurrentFirstResponder:@"Daniel\n"];
+    [tester waitForAbsenceOfViewWithAccessibilityLabel:alertViewMessage];
+    UILabel * nameLabel = (UILabel*)[tester waitForViewWithAccessibilityLabel:@"nameLabel"];
+    XCTAssert([[nameLabel text] isEqualToString:@"DANIEL"], @"Name should be DANIEL but was: %@", [nameLabel text]);
+}
 
 //============ COLOR LABEL TESTS ==============
 
