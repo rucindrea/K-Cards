@@ -65,10 +65,15 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSString *currentName = [self.nameLabel text];
     
-    UITextField * alertTextField = [alertView textFieldAtIndex:0];
-    NSString *name = [alertTextField.text uppercaseString];
-    if (![name isEqualToString:@""]) {
+    if (buttonIndex == 0) {
+        //Clicked cancel
+        [self.nameLabel setText:currentName];
+    }
+    else {
+        UITextField * alertTextField = [alertView textFieldAtIndex:0];
+        NSString *name = [alertTextField.text uppercaseString];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:name forKey:@"name"];
         [defaults synchronize];

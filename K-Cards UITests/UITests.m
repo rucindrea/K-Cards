@@ -49,11 +49,11 @@
     XCTAssert([[nameLabel text] isEqualToString:@""], @"Name should be empty but was: %@", [nameLabel text]);
 }
 
--(void)testAddEmptyNameShouldKeepPreviousName {
+-(void)testAddEmptyNameShouldClearPreviousName {
     [self changeNameTo:@"Anna"];
     [self changeNameTo:@""];
     UILabel * nameLabel = (UILabel*)[tester waitForViewWithAccessibilityLabel:@"nameLabel"];
-    XCTAssert([[nameLabel text] isEqualToString:@"ANNA"], @"Name should be ANNA but was: %@", [nameLabel text]);
+    XCTAssert([[nameLabel text] isEqualToString:@""], @"Name should be empty but was: %@", [nameLabel text]);
 }
 
 -(void)testAddEmptyNameAndCancelShouldKeepPreviousName {
