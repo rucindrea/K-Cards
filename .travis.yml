@@ -1,4 +1,4 @@
 language: objective-c
 xcode_workspace: K-Cards.xcworkspace
 xcode_scheme: 'K-CardsUITests'
-xcode_sdk: iphonesimulator8.0
+xcode_sdk: iphonesimulator
