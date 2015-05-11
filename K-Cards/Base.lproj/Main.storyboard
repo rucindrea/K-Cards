@@ -42,12 +42,17 @@
                                     <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFO-eT-TZr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K36-8c-ql6">
-                                <rect key="frame" x="234" y="550" width="133" height="30"/>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K36-8c-ql6">
+                                <rect key="frame" x="234" y="550" width="200" height="50"/>
                                 <accessibility key="accessibilityConfiguration" label="addNameButton"/>
-                                <state key="normal" title="Add Name/Number">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="fcF-G0-pYL"/>
+                                    <constraint firstAttribute="height" constant="40" id="ir0-dP-TRY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Add/Change Name" backgroundImage="button_white">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.96263307009999999" green="0.96263307009999999" blue="0.96263307009999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="addName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcy-oK-NC4"/>
@@ -57,6 +62,7 @@
                                 <rect key="frame" x="562" y="44" width="22" height="22"/>
                                 <accessibility key="accessibilityConfiguration" label="infoButton"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -274,4 +280,7 @@ For a full account of the history of K-Cards, here is Paul Holland's post about 
             <point key="canvasLocation" x="185" y="372"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_white" width="200" height="50"/>
+    </resources>
 </document>
