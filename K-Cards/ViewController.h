@@ -18,8 +18,8 @@
 #define myYellowColorText @"Yellow - Same Thread"
 #define myRedColorText @"Red - I MUST SPEAK RIGHT NOW!"
 
-#define alertViewMessage @"Add your name or your assigned number.\n\nIf your name is long and shows up too small, try to hold the device in landscape mode when you show it to your facilitator."
-#define alertViewTitle @"Add Name"
+#define alertViewMessage @"Add or change your name/number."
+#define alertViewTitle @"Add/Change Name"
 
 #define addNameButtonText @"Add Name/Number"
 
