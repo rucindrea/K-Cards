@@ -1,4 +1,3 @@
 language: objective-c
 xcode_workspace: K-Cards.xcworkspace
 xcode_scheme: 'K-Cards UITests'
-install: make get-deps
