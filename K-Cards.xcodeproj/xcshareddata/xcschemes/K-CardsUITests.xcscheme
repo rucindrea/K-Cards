@@ -9,8 +9,22 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2D28E4681AF21689005EAD4C"
+               BuildableName = "K-Cards.app"
+               BlueprintName = "K-Cards"
+               ReferencedContainer = "container:K-Cards.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
@@ -107,9 +121,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D28E4E51AFF8C6A005EAD4C"
-            BuildableName = "K-Cards UITests.xctest"
-            BlueprintName = "K-Cards UITests"
+            BlueprintIdentifier = "2D28E4681AF21689005EAD4C"
+            BuildableName = "K-Cards.app"
+            BlueprintName = "K-Cards"
             ReferencedContainer = "container:K-Cards.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
