@@ -1,3 +1,3 @@
 language: objective-c
 xcode_workspace: K-Cards.xcworkspace
-xcode_scheme: 'K-Cards UITests'
+xcode_scheme: 'Pods-K-Cards UITests'
