@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lKR-cG-5A4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lKR-cG-5A4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--MainView-->
         <scene sceneID="tne-QT-ifu">
@@ -73,7 +78,8 @@
                             </button>
                         </subviews>
                         <accessibility key="accessibilityConfiguration" label="mainView">
-                            <bool key="isElement" value="YES"/>
+                            <accessibilityTraits key="traits" none="YES"/>
+                            <bool key="isElement" value="NO"/>
                         </accessibility>
                         <constraints>
                             <constraint firstItem="K36-8c-ql6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Y2d-zs-E9x" secondAttribute="bottom" constant="5" id="ByS-NG-Fgb"/>
@@ -119,7 +125,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" contentMode="top" bounces="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-2g-kIi">
+                            <textView clipsSubviews="YES" contentMode="top" misplaced="YES" bounces="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-2g-kIi">
                                 <rect key="frame" x="16" y="34" width="568" height="566"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="infoTextView"/>
