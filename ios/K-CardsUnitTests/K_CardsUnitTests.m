@@ -12,7 +12,7 @@
 
 
 
-@interface K_CardsTests : XCTestCase
+@interface K_CardsUnitTests : XCTestCase
 
 
 @property (strong, nonatomic) UIApplication * app;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation K_CardsTests
+@implementation K_CardsUnitTests
 
 - (void)setUp {
     [super setUp];
@@ -71,7 +71,7 @@
     [self.mainViewController changeColor:[self.mainViewController changeButton]];
     [self.mainViewController changeColor:[self.mainViewController changeButton]];
     [self.mainViewController changeColor:[self.mainViewController changeButton]];
-
+    
     UIColor * colorAfterThreeChanges = [self.mainView backgroundColor];
     XCTAssert([colorAfterThreeChanges isEqual:myBlueColor], "@Color after one change should be blue, but is: %@", [self colorAsHex:colorAfterThreeChanges]);
 }
@@ -81,7 +81,7 @@
     [self.mainViewController changeColor:[self.mainViewController changeButton]];
     [self.mainViewController changeColor:[self.mainViewController changeButton]];
     [self.mainViewController changeColor:[self.mainViewController changeButton]];
-
+    
     UIColor * colorAfterFourChanges = [self.mainView backgroundColor];
     XCTAssert([colorAfterFourChanges isEqual:myGreenColor], "@Color after one change should be green, but is: %@", [self colorAsHex:colorAfterFourChanges]);
 }
@@ -97,6 +97,6 @@
     a = (int)(255.0 * aFloat);
     return [NSString stringWithFormat:@"R:%i G:%i B:%i", r, g, b];
 }
-                                                                                                                        
-                                                                                                                        
+
+
 @end

@@ -25,10 +25,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="33" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-zs-E9x">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="33" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-zs-E9x">
                                 <rect key="frame" x="16" y="121" width="568" height="358"/>
                                 <accessibility key="accessibilityConfiguration" label="nameLabel"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="300"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="250"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -76,6 +76,7 @@
                             <bool key="isElement" value="YES"/>
                         </accessibility>
                         <constraints>
+                            <constraint firstItem="K36-8c-ql6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Y2d-zs-E9x" secondAttribute="bottom" constant="5" id="ByS-NG-Fgb"/>
                             <constraint firstAttribute="centerY" secondItem="Y2d-zs-E9x" secondAttribute="centerY" constant="-0.5" id="FgA-eK-qIs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XQQ-Ld-jgW" secondAttribute="trailing" constant="-16" id="OaW-Xa-tLt"/>
                             <constraint firstItem="USf-1y-4Q5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="StI-0y-CfN"/>
@@ -89,7 +90,7 @@
                             <constraint firstAttribute="centerX" secondItem="Y2d-zs-E9x" secondAttribute="centerX" id="h2o-Jb-DBK"/>
                             <constraint firstItem="Y2d-zs-E9x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hfU-7V-uvq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XQQ-Ld-jgW" secondAttribute="bottom" id="pMP-OZ-UQP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K36-8c-ql6" secondAttribute="bottom" constant="20" id="sP6-aO-W0I"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K36-8c-ql6" secondAttribute="bottom" constant="10" id="sP6-aO-W0I"/>
                             <constraint firstItem="Y2d-zs-E9x" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xWz-fG-Qyn"/>
                         </constraints>
                     </view>
@@ -189,8 +190,23 @@ Here are all the color</string>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
+                                    <fragment content=" Pleas">
+                                        <attributes>
+                                            <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="e">
+                                        <attributes>
+                                            <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
                                     <fragment>
-                                        <string key="content"> Pleas place me on the same thread list
+                                        <string key="content"> place me on the same thread list
 ·   </string>
                                         <attributes>
                                             <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>

@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4EC66E5D-1E68-4874-AD3C-AE2CE666513A</string>
+	<string>4878CC45-65F5-4101-8E37-F30101906503</string>
 	<key>IDESourceControlProjectName</key>
-	<string>K-Cards</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F453202D42BD3059BD2BEED3887E747CA520CCCC</key>
 		<string>https://github.com/rucindrea/K-Cards.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>K-Cards.xcworkspace</string>
+	<string>ios/K-Cards.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F453202D42BD3059BD2BEED3887E747CA520CCCC</key>
-		<string>..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/rucindrea/K-Cards.git</string>

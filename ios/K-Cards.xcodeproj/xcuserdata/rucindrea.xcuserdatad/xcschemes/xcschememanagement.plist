@@ -9,14 +9,14 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>K-CardsUITests.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2D04D1171B5E35BD000F0A72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2D28E4681AF21689005EAD4C</key>
 		<dict>
 			<key>primary</key>
@@ -28,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>2D28E4E51AFF8C6A005EAD4C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DC1AE511B31586300DE467B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
