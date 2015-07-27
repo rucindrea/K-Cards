@@ -32,7 +32,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="33" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-zs-E9x">
                                 <rect key="frame" x="16" y="121" width="568" height="358"/>
-                                <accessibility key="accessibilityConfiguration" label="nameLabel"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nameLabel" label=""/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="250"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

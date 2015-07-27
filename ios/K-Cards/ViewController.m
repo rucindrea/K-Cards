@@ -26,6 +26,7 @@
     }
     else {
         [self.nameLabel setText:currentName];
+        [self.nameLabel setAccessibilityValue:currentName];
     }
     [self.view setBackgroundColor:myGreenColor];
     [self.colorLabel setText:myGreenColorText];
@@ -74,6 +75,8 @@
     if (buttonIndex == 0) {
         //Clicked cancel
         [self.nameLabel setText:currentName];
+        [self.nameLabel setAccessibilityValue:currentName];
+
     }
     else {
         UITextField * alertTextField = [alertView textFieldAtIndex:0];
@@ -82,6 +85,7 @@
         [defaults setObject:name forKey:@"name"];
         [defaults synchronize];
         [self.nameLabel setText:name];
+        [self.nameLabel setAccessibilityValue:name];
     }
 }
 

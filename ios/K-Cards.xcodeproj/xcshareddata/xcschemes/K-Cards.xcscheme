@@ -54,38 +54,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D28E4841AF21689005EAD4C"
-               BuildableName = "K-CardsTests.xctest"
-               BlueprintName = "K-CardsTests"
-               ReferencedContainer = "container:K-Cards.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D28E4E51AFF8C6A005EAD4C"
-               BuildableName = "K-Cards UITests.xctest"
-               BlueprintName = "K-Cards UITests"
-               ReferencedContainer = "container:K-Cards.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2DC1AE511B31586300DE467B"
-               BuildableName = "K-CardsUITests.xctest"
-               BlueprintName = "K-CardsUITests"
-               ReferencedContainer = "container:K-Cards.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -93,6 +64,16 @@
                BlueprintIdentifier = "2D04D1171B5E35BD000F0A72"
                BuildableName = "K-CardsUnitTests.xctest"
                BlueprintName = "K-CardsUnitTests"
+               ReferencedContainer = "container:K-Cards.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2D04D1251B5E3A11000F0A72"
+               BuildableName = "K_CardsUITests.xctest"
+               BlueprintName = "K_CardsUITests"
                ReferencedContainer = "container:K-Cards.xcodeproj">
             </BuildableReference>
          </TestableReference>
