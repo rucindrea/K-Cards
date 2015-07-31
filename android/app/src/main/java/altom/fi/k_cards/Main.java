@@ -2,16 +2,23 @@ package altom.fi.k_cards;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextPaint;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.prefs.PreferenceChangeEvent;
 
 
 public class Main extends Activity implements View.OnClickListener {
@@ -31,6 +38,10 @@ public class Main extends Activity implements View.OnClickListener {
     float textViewWidth;
     Paint paint;
     String text = "";
+    float size = 0;
+
+    public SharedPreferences app_preferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +64,14 @@ public class Main extends Activity implements View.OnClickListener {
         textViewWidth = nameTextView.getWidth();
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
+        app_preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        float size = calibrateTextSize(paint, text, 0, 150, textViewWidth);
+        text = app_preferences.getString("name", "");
+        nameTextView.setText(text);
+        size = app_preferences.getFloat("size", 100);
         nameTextView.setTextSize(size);
+
+
     }
 
 
@@ -69,15 +85,29 @@ public class Main extends Activity implements View.OnClickListener {
 
             final EditText input = new EditText(this);
             alert.setView(input);
+            input.setText(text);
+            input.selectAll();
+
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+
+
 
             alert.setPositiveButton("Add", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
                     text = input.getText().toString().toUpperCase();
                     nameTextView.setText(text);
 
+                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
                     textViewWidth = nameTextView.getWidth();
-                    float size = calibrateTextSize(paint, text, 0, 150, textViewWidth);
+                    size = calibrateTextSize(paint, text, 0, 150, textViewWidth);
                     nameTextView.setTextSize(size);
+
+                    SharedPreferences.Editor editor = app_preferences.edit();
+                    editor.putString("name", text);
+                    editor.putFloat("size", size);
+                    editor.commit();
 
 
                 }
@@ -85,6 +115,8 @@ public class Main extends Activity implements View.OnClickListener {
 
             alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
+
+                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                     // Canceled.
                 }
             });
