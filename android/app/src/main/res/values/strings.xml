@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">K-Cards</string>
+    <string name="add_name_button">Add Name/Number</string>
+    <string name="name_content"></string>
+    <string name="color_label">Green - New Thread</string>
+    <string name="name_text"></string>
+    <string name="infoButton">Info</string>
+</resources>
