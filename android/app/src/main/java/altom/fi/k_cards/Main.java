@@ -5,7 +5,9 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.TextPaint;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,11 +21,16 @@ public class Main extends Activity implements View.OnClickListener {
     Button addNameButton;
     Button changeColorButton;
     Button infoButton;
+    Button butonel;
 
     int greenColor;
     int blueColor;
     int redColor;
     int yellowColor;
+
+    float textViewWidth;
+    Paint paint;
+    String text = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +47,15 @@ public class Main extends Activity implements View.OnClickListener {
         greenColor = Color.parseColor("#389209");
         blueColor = Color.parseColor("#005FC8");
         redColor = Color.parseColor("#FF0000");
-        yellowColor  = Color.parseColor("#EDE30C");
+        yellowColor = Color.parseColor("#EDE30C");
+
+        //for text resize purposes
+        textViewWidth = nameTextView.getWidth();
+        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+
+        float size = calibrateTextSize(paint, text, 0, 150, textViewWidth);
+        nameTextView.setTextSize(size);
     }
 
 
@@ -57,7 +72,14 @@ public class Main extends Activity implements View.OnClickListener {
 
             alert.setPositiveButton("Add", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
-                    nameTextView.setText(input.getText().toString().toUpperCase());
+                    text = input.getText().toString().toUpperCase();
+                    nameTextView.setText(text);
+
+                    textViewWidth = nameTextView.getWidth();
+                    float size = calibrateTextSize(paint, text, 0, 150, textViewWidth);
+                    nameTextView.setTextSize(size);
+
+
                 }
             });
 
@@ -77,24 +99,22 @@ public class Main extends Activity implements View.OnClickListener {
                 colorLabelTextView.setTextColor(Color.BLACK);
                 addNameButton.setTextColor(Color.BLACK);
                 nameTextView.setTextColor(Color.BLACK);
+                infoButton.setTextColor(Color.BLACK);
                 colorLabelTextView.setText("Yellow - Same Thread");
-            }
-            else if (colorLabelTextView.getText().toString().contains("Yellow")) {
+            } else if (colorLabelTextView.getText().toString().contains("Yellow")) {
                 backgroundView.setBackgroundColor(redColor);
                 colorLabelTextView.setTextColor(Color.WHITE);
                 addNameButton.setTextColor(Color.WHITE);
                 nameTextView.setTextColor(Color.WHITE);
+                infoButton.setTextColor(Color.WHITE);
                 colorLabelTextView.setText("Red - I MUST SPEAK RIGHT NOW!");
-            }
-            else if (colorLabelTextView.getText().toString().contains("Red")){
+            } else if (colorLabelTextView.getText().toString().contains("Red")) {
                 backgroundView.setBackgroundColor(blueColor);
                 colorLabelTextView.setText("Blue - Rat hole/going nowhere");
-            }
-            else if (colorLabelTextView.getText().toString().contains("Blue")){
+            } else if (colorLabelTextView.getText().toString().contains("Blue")) {
                 backgroundView.setBackgroundColor(greenColor);
                 colorLabelTextView.setText("Green - New Thread");
-            }
-            else {
+            } else {
                 backgroundView.setBackgroundColor(greenColor);
                 colorLabelTextView.setText("Green - New Thread");
             }
@@ -133,15 +153,10 @@ public class Main extends Activity implements View.OnClickListener {
         }
     }
 
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            nameTextView.setTextSize(200);
-        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-            nameTextView.setTextSize(100);
-        }
-
+    public static float calibrateTextSize(Paint paint, String text, float min, float max, float boxWidth) {
+        float size = (Math.max(Math.min((boxWidth / paint.measureText(text) * 4), max), min));
+        System.out.println("size " + size);
+        System.out.println("text " + paint.measureText(text));
+        return size;
     }
 }
