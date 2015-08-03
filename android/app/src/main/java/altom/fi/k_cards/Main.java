@@ -10,15 +10,15 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.text.TextPaint;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import java.util.prefs.PreferenceChangeEvent;
 
 
 public class Main extends Activity implements View.OnClickListener {
@@ -28,7 +28,6 @@ public class Main extends Activity implements View.OnClickListener {
     Button addNameButton;
     Button changeColorButton;
     Button infoButton;
-    Button butonel;
 
     int greenColor;
     int blueColor;
@@ -39,6 +38,8 @@ public class Main extends Activity implements View.OnClickListener {
     Paint paint;
     String text = "";
     float size = 0;
+    int max_text_size;
+    static double constant;
 
     public SharedPreferences app_preferences;
 
@@ -61,19 +62,26 @@ public class Main extends Activity implements View.OnClickListener {
         yellowColor = Color.parseColor("#EDE30C");
 
         //for text resize purposes
+        if (isTablet()) {
+            max_text_size = 450;
+            constant = 5.5;
+        } else {
+            max_text_size = 200;
+            constant = 3.5;
+        }
+
         textViewWidth = nameTextView.getWidth();
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
         app_preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         text = app_preferences.getString("name", "");
+//        size = app_preferences.getFloat("size", 100);
+        size = calibrateTextSize(paint, text, 0, max_text_size, textViewWidth);
         nameTextView.setText(text);
-        size = app_preferences.getFloat("size", 100);
         nameTextView.setTextSize(size);
 
 
     }
-
 
     @Override
     public void onClick(View v) {
@@ -91,9 +99,8 @@ public class Main extends Activity implements View.OnClickListener {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
 
-
-
             alert.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+
                 public void onClick(DialogInterface dialog, int whichButton) {
                     text = input.getText().toString().toUpperCase();
                     nameTextView.setText(text);
@@ -101,15 +108,13 @@ public class Main extends Activity implements View.OnClickListener {
                     getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
                     textViewWidth = nameTextView.getWidth();
-                    size = calibrateTextSize(paint, text, 0, 150, textViewWidth);
+                    size = calibrateTextSize(paint, text, 0, max_text_size, textViewWidth);
                     nameTextView.setTextSize(size);
 
                     SharedPreferences.Editor editor = app_preferences.edit();
                     editor.putString("name", text);
                     editor.putFloat("size", size);
                     editor.commit();
-
-
                 }
             });
 
@@ -120,9 +125,9 @@ public class Main extends Activity implements View.OnClickListener {
                     // Canceled.
                 }
             });
-
             alert.show();
         }
+
         if (v.getId() == R.id.changeColorButton) {
             View backgroundView = findViewById(R.id.name_content);
 
@@ -132,6 +137,7 @@ public class Main extends Activity implements View.OnClickListener {
                 addNameButton.setTextColor(Color.BLACK);
                 nameTextView.setTextColor(Color.BLACK);
                 infoButton.setTextColor(Color.BLACK);
+                changeColorButton.setTextColor(Color.BLACK);
                 colorLabelTextView.setText("Yellow - Same Thread");
             } else if (colorLabelTextView.getText().toString().contains("Yellow")) {
                 backgroundView.setBackgroundColor(redColor);
@@ -139,6 +145,7 @@ public class Main extends Activity implements View.OnClickListener {
                 addNameButton.setTextColor(Color.WHITE);
                 nameTextView.setTextColor(Color.WHITE);
                 infoButton.setTextColor(Color.WHITE);
+                changeColorButton.setTextColor(Color.WHITE);
                 colorLabelTextView.setText("Red - I MUST SPEAK RIGHT NOW!");
             } else if (colorLabelTextView.getText().toString().contains("Red")) {
                 backgroundView.setBackgroundColor(blueColor);
@@ -185,10 +192,52 @@ public class Main extends Activity implements View.OnClickListener {
         }
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        final View view = findViewById(R.id.nameTextView);
+
+        ViewTreeObserver observer = view.getViewTreeObserver();
+        observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+
+            @Override
+            public void onGlobalLayout() {
+                Log.v(TAG,
+                        String.format("new width=%d; new height=%d", view.getWidth(),
+                                view.getHeight()));
+
+                textViewWidth = view.getWidth();
+                size = calibrateTextSize(paint, text, 0, max_text_size, textViewWidth);
+                nameTextView.setTextSize(size);
+
+                SharedPreferences.Editor editor = app_preferences.edit();
+                editor.putFloat("size", size);
+                editor.commit();
+
+                view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+            }
+        });
+    }
+
     public static float calibrateTextSize(Paint paint, String text, float min, float max, float boxWidth) {
-        float size = (Math.max(Math.min((boxWidth / paint.measureText(text) * 4), max), min));
-        System.out.println("size " + size);
-        System.out.println("text " + paint.measureText(text));
+        float size = (float) Math.max(Math.min((boxWidth / paint.measureText(text) * constant), max), min);
+        System.out.println("text size logg " + size);
+        System.out.println("width logg " + paint.measureText(text));
         return size;
+    }
+
+    public boolean isTablet() {
+        try {
+            // Compute screen size
+            DisplayMetrics dm = getResources().getDisplayMetrics();
+            float screenWidth = dm.widthPixels / dm.xdpi;
+            float screenHeight = dm.heightPixels / dm.ydpi;
+            double size = Math.sqrt(Math.pow(screenWidth, 2) +
+                    Math.pow(screenHeight, 2));
+            // Tablet devices should have a screen size greater than 6 inches
+            return size >= 6;
+        } catch (Throwable t) {
+            return false;
+        }
     }
 }
