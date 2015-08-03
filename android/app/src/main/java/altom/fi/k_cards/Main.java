@@ -62,22 +62,25 @@ public class Main extends Activity implements View.OnClickListener {
         yellowColor = Color.parseColor("#EDE30C");
 
         //for text resize purposes
+        if (isTablet()) {
+            max_text_size = 450;
+            constant = 5.5;
+        } else {
+            max_text_size = 200;
+            constant = 3.5;
+        }
+
         textViewWidth = nameTextView.getWidth();
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         app_preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         text = app_preferences.getString("name", "");
-        size = app_preferences.getFloat("size", 100);
+//        size = app_preferences.getFloat("size", 100);
+        size = calibrateTextSize(paint, text, 0, max_text_size, textViewWidth);
         nameTextView.setText(text);
         nameTextView.setTextSize(size);
 
-        if (isTablet()) {
-            max_text_size = 450;
-            constant = 5.5;
-        } else {
-            max_text_size = 250;
-            constant = 3.5;
-        }
+
     }
 
     @Override
@@ -134,6 +137,7 @@ public class Main extends Activity implements View.OnClickListener {
                 addNameButton.setTextColor(Color.BLACK);
                 nameTextView.setTextColor(Color.BLACK);
                 infoButton.setTextColor(Color.BLACK);
+                changeColorButton.setTextColor(Color.BLACK);
                 colorLabelTextView.setText("Yellow - Same Thread");
             } else if (colorLabelTextView.getText().toString().contains("Yellow")) {
                 backgroundView.setBackgroundColor(redColor);
@@ -141,6 +145,7 @@ public class Main extends Activity implements View.OnClickListener {
                 addNameButton.setTextColor(Color.WHITE);
                 nameTextView.setTextColor(Color.WHITE);
                 infoButton.setTextColor(Color.WHITE);
+                changeColorButton.setTextColor(Color.WHITE);
                 colorLabelTextView.setText("Red - I MUST SPEAK RIGHT NOW!");
             } else if (colorLabelTextView.getText().toString().contains("Red")) {
                 backgroundView.setBackgroundColor(blueColor);

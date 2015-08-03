@@ -1,11 +1,4 @@
 old
 android/.idea
 android/build
-android.iml
-K-Cards.iml
 local.properties
-android/gradlew
-android/gradlew.bat
-android/app/app-debug.apk
-android/app/app.iml
-android/app/proguard-rules.pro
