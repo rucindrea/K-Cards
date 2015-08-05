@@ -129,7 +129,7 @@ public class Main extends Activity implements View.OnClickListener {
         }
 
         if (v.getId() == R.id.changeColorButton) {
-            View backgroundView = findViewById(R.id.name_content);
+            View backgroundView = findViewById(R.id.background);
 
             if (colorLabelTextView.getText().toString().contains("Green")) {
                 backgroundView.setBackgroundColor(yellowColor);
